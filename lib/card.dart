@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:teste/page2.dart';
-import 'list.dart';
+import 'screens/page2.dart';
 
 class Cards extends StatefulWidget {
-  Cards({required this.nameShoe, required this.photo});
+  Cards({
+    required this.nameShoe,
+    required this.photo,
+  });
 
   final String nameShoe;
   final AssetImage photo;
@@ -85,7 +87,7 @@ class _CardsState extends State<Cards> {
                       ),
                     ),
                     Text(
-                      'the best shoes for skate riding!',
+                      'Os melhores tenis para suas atividades fisicas e esportes',
                       style: TextStyle(
                           color: Colors.grey, fontWeight: FontWeight.bold),
                     ),
@@ -129,6 +131,7 @@ class _Card2State extends State<Card2> {
         Center(
           child: Container(
             height: 500,
+            width: 400,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(50),
@@ -144,6 +147,25 @@ class _Card2State extends State<Card2> {
                   offset: Offset(-10.0, 10.0),
                   blurRadius: 20.0,
                   spreadRadius: 4.0,
+                ),
+              ],
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  child: Material(
+                    child: Container(
+                      color: Colors.white,
+                      child: Text(
+                        widget.information,
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 20,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
