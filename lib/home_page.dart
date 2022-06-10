@@ -81,12 +81,6 @@ class _HomePageState extends State<HomePage> {
                       'Valor: RS 450\n\n prazo: 5 dias uteis',
                 ),
                 const Cards(
-                  nameShoe: 'Vans Old School',
-                  photo: kvans,
-                  descricao: 'Vans tenis feito \npara seu rolê de skate\n\n'
-                      'Valor: RS 400 \n\n prazo: chega amanha',
-                ),
-                const Cards(
                   nameShoe: 'Mercurial Pro',
                   photo: kchuteira,
                   descricao:
@@ -112,6 +106,12 @@ class _HomePageState extends State<HomePage> {
                   descricao:
                       'Nike Dunk, tenis perfeito \npra jogar um basquete\n\n'
                       'Valor: RS 370\n\n prazo: 5 dias uteis',
+                ),
+                const Cards(
+                  nameShoe: 'Vans Old School',
+                  photo: kvans,
+                  descricao: 'Vans tenis feito \npara seu rolê de skate\n\n'
+                      'Valor: RS 400 \n\n prazo: chega amanha',
                 ),
               ],
             ),
