@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:teste/models/tenis.dart';
+import 'package:teste/page2.dart';
 import 'home_page.dart';
 
-main() => runApp(Xshoes());
+main() => runApp(const Xshoes());
 
 class Xshoes extends StatelessWidget {
   const Xshoes({Key? key}) : super(key: key);
@@ -10,10 +12,18 @@ class Xshoes extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF2C004A),
-        scaffoldBackgroundColor: Color(0xFF2C004A),
+        primaryColor: const Color(0xFF2C004A),
+        scaffoldBackgroundColor: const Color(0xFF2C004A),
       ),
-      home: HomePage(),
+      home: const HomePage(),
+      routes: {
+        '/detail-shoe': (context) {
+          final args = ModalRoute.of(context)!.settings.arguments as Tenis;
+          return Page2(
+            tenis: args,
+          );
+        },
+      },
     );
   }
 }

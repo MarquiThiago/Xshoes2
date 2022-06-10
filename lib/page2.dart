@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'consts.dart';
-import 'card.dart';
+import 'card_2.dart';
+import 'models/tenis.dart';
 
 class Page2 extends StatefulWidget {
+  final Tenis tenis;
+
+  @override
+  const Page2({Key? key, required this.tenis}) : super(key: key);
   @override
   State<Page2> createState() => _Page2State();
 }
@@ -19,16 +23,33 @@ class _Page2State extends State<Page2> {
             onPressed: (() {
               Navigator.pop(context);
             }),
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
             color: Colors.black,
           );
         }),
       ),
-      backgroundColor: Color(0xFF363f93),
-      body: Card2(
-        photo: KDCshoes,
-        information:
-            'Descrição: tenis feito para o seu role de skate\n\n Valor: 1.999\n\n Praso: 15 dias',
+      backgroundColor: const Color(0xFF363f93),
+      body: Column(
+        children: [
+          Card2(
+            photo: widget.tenis.foto,
+            information: widget.tenis.descricao,
+            nameShoe: widget.tenis.nameshoes,
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Container(
+            child: Text(
+              'Xshoes',
+              style: TextStyle(
+                fontSize: 40,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
