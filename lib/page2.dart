@@ -36,17 +36,15 @@ class _Page2State extends State<Page2> {
             information: widget.tenis.descricao,
             nameShoe: widget.tenis.nameshoes,
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
-          Container(
-            child: Text(
-              'Xshoes',
-              style: TextStyle(
-                fontSize: 40,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-              ),
+          const Text(
+            'Xshoes',
+            style: TextStyle(
+              fontSize: 40,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
             ),
           )
         ],
